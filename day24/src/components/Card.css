@@ -1,0 +1,46 @@
+.card{
+
+  width:300px;
+
+  margin:100px auto;
+
+  padding:20px;
+
+  text-align:center;
+
+  border-radius:12px;
+
+  box-shadow:0 0 12px gray;
+
+  transition:0.3s;
+
+}
+
+
+.card:hover{
+
+  transform:scale(1.05);
+
+}
+
+
+.card button{
+
+  padding:10px 20px;
+
+  cursor:pointer;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+  .card{
+
+    width:90%;
+
+  }
+
+}

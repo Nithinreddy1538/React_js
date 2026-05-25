@@ -1,0 +1,19 @@
+.card{
+  width:300px;
+  margin:100px auto;
+  padding:20px;
+
+  text-align:center;
+
+  border-radius:10px;
+
+  box-shadow:0 0 10px gray;
+}
+
+.card button{
+  padding:10px 20px;
+
+  margin-top:10px;
+
+  cursor:pointer;
+}

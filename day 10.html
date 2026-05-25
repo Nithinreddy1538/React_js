@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 10 Forms</title>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    const { useState } = React;
+
+    function App() {
+      const [name, setName] = useState("");
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("Submitted: " + name);
+      };
+
+      return (
+        <div>
+          <h1>Simple Form</h1>
+
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+
+            <button type="submit">Submit</button>
+          </form>
+
+          <h2>{name && `You typed: ${name}`}</h2>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+
+  </script>
+</body>
+</html>
